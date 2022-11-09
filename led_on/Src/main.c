@@ -18,5 +18,17 @@ int main(void)
 
 	//1. enable the clock for GPOID peripheral in the AHB1ENR
 
+	*pClkCtrlReg |= 0x08;
+
+	//2. configure the mode of the IO pin as output
+	//a. clear the 24th and 25th bit positions
+	*pPortDModeReg &= 0x00FFFFFF;
+	//b. make 24th bit position as 1 (SET)
+	*pPortDModeReg |= 0x55000000;
+
+	//3. SET 12th bit of the output data register to make I/O pin-12 HIGH
+	*pPortDOutReg |= 0xF000;
+
+
 	while(1);
 }
