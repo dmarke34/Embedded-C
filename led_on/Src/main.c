@@ -12,8 +12,11 @@
 
 int main(void)
 {
-	uint32_t *pClkctrlreg = (uint32_t*)0x40023830;
+	uint32_t *pClkCtrlReg = (uint32_t*)0x40023830;
 	uint32_t *pPortDModeReg = (uint32_t*)0x40020C00;
 	uint32_t *pPortDOutReg = (uint32_t*)0x40020C14;
-	for(;;);
+
+	//1. enable the clock for GPOID peripheral in the AHB1ENR
+
+	while(1);
 }
