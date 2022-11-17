@@ -8,6 +8,7 @@
 */
 
 #include<stdint.h>
+#include<stdio.h>
 
 int main(void)
 {
@@ -19,10 +20,10 @@ int main(void)
 
 	*pClkCtrlReg |= (1 << 3);
 
-	//2. configure the mode of the IO pin as output
-	//a. clear the 24th and 25th bit positions (CLEAR)
+	//2. Configure the mode of the IO pin as output
+	//a. Clear the 24th and 25th bit positions (CLEAR)
 	*pPortDModeReg &= ~(3 << 24);
-	//b. make 24th bit position as 1 (SET)
+	//b. Make 24th bit position as 1 (SET)
 	*pPortDModeReg |= (1 << 24);
 
 	while(1) {
