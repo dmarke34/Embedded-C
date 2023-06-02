@@ -27,14 +27,14 @@ int main(void)
 	*pPortDModeReg |= (1 << 24);
 
 	while(1) {
-		//3. SET 12th bit of the output data register to make I/O pin-12 HIGH
+	//3. SET 12th bit of the output data register to make I/O pin-12 HIGH
 		*pPortDOutReg |= (1 << 12);
 
-		//introduce small human observable delay
+	//introduce small human observable delay
 
 		for(uint32_t i = 0; i < 2000000; i++);
 
-		//Turn OFF the LED
+	//Turn OFF the LED
 		*pPortDOutReg &= ~(1 << 12);
 
 		for(uint32_t i = 0; i < 2000000; i++);
