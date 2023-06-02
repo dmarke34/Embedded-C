@@ -21,9 +21,9 @@ int main(void)
 	*pClkCtrlReg |= (1 << 3);
 
 	//2. Configure the mode of the IO pin as output
-	//a. Clear the 24th and 25th bit positions (CLEAR)
+		//a. Clear the 24th and 25th bit positions (CLEAR)
 	*pPortDModeReg &= ~(3 << 24);
-	//b. Make 24th bit position as 1 (SET)
+		//b. Make 24th bit position as 1 (SET)
 	*pPortDModeReg |= (1 << 24);
 
 	while(1) {

@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  0001032c  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00000122  00000000  00000000  0001035c  2**0
+ 12 .debug_info   0000093b  00000000  00000000  0001035c  2**0
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_abbrev 000000a3  00000000  00000000  0001047e  2**0
+ 13 .debug_abbrev 000001ab  00000000  00000000  00010c97  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_aranges 00000048  00000000  00000000  00010528  2**3
+ 14 .debug_aranges 00000048  00000000  00000000  00010e48  2**3
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_ranges 00000030  00000000  00000000  00010570  2**3
+ 15 .debug_ranges 00000030  00000000  00000000  00010e90  2**3
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_macro  00000f02  00000000  00000000  000105a0  2**0
+ 16 .debug_macro  00001c25  00000000  00000000  00010ec0  2**0
                   CONTENTS, READONLY, DEBUGGING
- 17 .debug_line   00000425  00000000  00000000  000114a2  2**0
+ 17 .debug_line   00000606  00000000  00000000  00012ae5  2**0
                   CONTENTS, READONLY, DEBUGGING
- 18 .debug_str    00003b15  00000000  00000000  000118c7  2**0
+ 18 .debug_str    00007e4e  00000000  00000000  000130eb  2**0
                   CONTENTS, READONLY, DEBUGGING
- 19 .comment      0000007b  00000000  00000000  000153dc  2**0
+ 19 .comment      0000007b  00000000  00000000  0001af39  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00000058  00000000  00000000  00015458  2**2
+ 20 .debug_frame  00000058  00000000  00000000  0001afb4  2**2
                   CONTENTS, READONLY, DEBUGGING
 
 Disassembly of section .text:
@@ -77,9 +77,9 @@ Disassembly of section .text:
  80001e4:	0800030c 	.word	0x0800030c
 
 080001e8 <main>:
-*/
 
 #include<stdint.h>
+#include<stdio.h>
 
 int main(void)
 {
@@ -96,7 +96,7 @@ int main(void)
  80001f6:	4b1c      	ldr	r3, [pc, #112]	; (8000268 <main+0x80>)
  80001f8:	607b      	str	r3, [r7, #4]
 
-	//1. enable the clock for GPOID peripheral in the AHB1ENR (SET the 3rd bit position)
+	//1. Enable the clock for GPOID peripheral in the AHB1ENR (SET the 3rd bit position)
 
 	*pClkCtrlReg |= (1 << 3);
  80001fa:	68fb      	ldr	r3, [r7, #12]
@@ -105,15 +105,15 @@ int main(void)
  8000202:	68fb      	ldr	r3, [r7, #12]
  8000204:	601a      	str	r2, [r3, #0]
 
-	//2. configure the mode of the IO pin as output
-	//a. clear the 24th and 25th bit positions (CLEAR)
+	//2. Configure the mode of the IO pin as output
+		//a. Clear the 24th and 25th bit positions (CLEAR)
 	*pPortDModeReg &= ~(3 << 24);
  8000206:	68bb      	ldr	r3, [r7, #8]
  8000208:	681b      	ldr	r3, [r3, #0]
  800020a:	f023 7240 	bic.w	r2, r3, #50331648	; 0x3000000
  800020e:	68bb      	ldr	r3, [r7, #8]
  8000210:	601a      	str	r2, [r3, #0]
-	//b. make 24th bit position as 1 (SET)
+		//b. Make 24th bit position as 1 (SET)
 	*pPortDModeReg |= (1 << 24);
  8000212:	68bb      	ldr	r3, [r7, #8]
  8000214:	681b      	ldr	r3, [r3, #0]

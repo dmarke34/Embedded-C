@@ -31,6 +31,31 @@ Discarded input sections
  .group         0x0000000000000000        0xc Src/main.o
  .group         0x0000000000000000        0xc Src/main.o
  .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
+ .group         0x0000000000000000        0xc Src/main.o
  .text          0x0000000000000000        0x0 Src/main.o
  .data          0x0000000000000000        0x0 Src/main.o
  .bss           0x0000000000000000        0x0 Src/main.o
@@ -574,13 +599,13 @@ LOAD c:/st/stm32cubeide_1.0.2/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.exte
                 0x00000000000000e4       0x22 c:/st/stm32cubeide_1.0.2/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.0.0.201904181610/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/fpv4-sp/hard/crtn.o
 OUTPUT(005led_toggle.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000      0x122
- .debug_info    0x0000000000000000      0x100 Src/main.o
- .debug_info    0x0000000000000100       0x22 Startup/startup_stm32f407vgtx.o
+.debug_info     0x0000000000000000      0x93b
+ .debug_info    0x0000000000000000      0x919 Src/main.o
+ .debug_info    0x0000000000000919       0x22 Startup/startup_stm32f407vgtx.o
 
-.debug_abbrev   0x0000000000000000       0xa3
- .debug_abbrev  0x0000000000000000       0x91 Src/main.o
- .debug_abbrev  0x0000000000000091       0x12 Startup/startup_stm32f407vgtx.o
+.debug_abbrev   0x0000000000000000      0x1ab
+ .debug_abbrev  0x0000000000000000      0x199 Src/main.o
+ .debug_abbrev  0x0000000000000199       0x12 Startup/startup_stm32f407vgtx.o
 
 .debug_aranges  0x0000000000000000       0x48
  .debug_aranges
@@ -592,24 +617,49 @@ OUTPUT(005led_toggle.elf elf32-littlearm)
  .debug_ranges  0x0000000000000000       0x10 Src/main.o
  .debug_ranges  0x0000000000000010       0x20 Startup/startup_stm32f407vgtx.o
 
-.debug_macro    0x0000000000000000      0xf02
- .debug_macro   0x0000000000000000       0x63 Src/main.o
- .debug_macro   0x0000000000000063      0xa66 Src/main.o
- .debug_macro   0x0000000000000ac9       0x22 Src/main.o
- .debug_macro   0x0000000000000aeb       0x8e Src/main.o
- .debug_macro   0x0000000000000b79       0x51 Src/main.o
- .debug_macro   0x0000000000000bca       0xef Src/main.o
- .debug_macro   0x0000000000000cb9       0x6a Src/main.o
- .debug_macro   0x0000000000000d23      0x1df Src/main.o
+.debug_macro    0x0000000000000000     0x1c25
+ .debug_macro   0x0000000000000000      0x1be Src/main.o
+ .debug_macro   0x00000000000001be      0xa66 Src/main.o
+ .debug_macro   0x0000000000000c24       0x22 Src/main.o
+ .debug_macro   0x0000000000000c46       0x8e Src/main.o
+ .debug_macro   0x0000000000000cd4       0x51 Src/main.o
+ .debug_macro   0x0000000000000d25       0xef Src/main.o
+ .debug_macro   0x0000000000000e14       0x6a Src/main.o
+ .debug_macro   0x0000000000000e7e      0x1df Src/main.o
+ .debug_macro   0x000000000000105d       0x46 Src/main.o
+ .debug_macro   0x00000000000010a3       0x18 Src/main.o
+ .debug_macro   0x00000000000010bb       0x3c Src/main.o
+ .debug_macro   0x00000000000010f7       0x34 Src/main.o
+ .debug_macro   0x000000000000112b       0x16 Src/main.o
+ .debug_macro   0x0000000000001141       0x97 Src/main.o
+ .debug_macro   0x00000000000011d8      0x330 Src/main.o
+ .debug_macro   0x0000000000001508       0xfd Src/main.o
+ .debug_macro   0x0000000000001605       0x10 Src/main.o
+ .debug_macro   0x0000000000001615       0x52 Src/main.o
+ .debug_macro   0x0000000000001667       0x1f Src/main.o
+ .debug_macro   0x0000000000001686       0x43 Src/main.o
+ .debug_macro   0x00000000000016c9       0x20 Src/main.o
+ .debug_macro   0x00000000000016e9      0x1a3 Src/main.o
+ .debug_macro   0x000000000000188c       0x10 Src/main.o
+ .debug_macro   0x000000000000189c       0x1c Src/main.o
+ .debug_macro   0x00000000000018b8       0x52 Src/main.o
+ .debug_macro   0x000000000000190a       0x40 Src/main.o
+ .debug_macro   0x000000000000194a       0x10 Src/main.o
+ .debug_macro   0x000000000000195a       0x40 Src/main.o
+ .debug_macro   0x000000000000199a       0xd7 Src/main.o
+ .debug_macro   0x0000000000001a71       0x1c Src/main.o
+ .debug_macro   0x0000000000001a8d       0x3d Src/main.o
+ .debug_macro   0x0000000000001aca       0x16 Src/main.o
+ .debug_macro   0x0000000000001ae0      0x145 Src/main.o
 
-.debug_line     0x0000000000000000      0x425
- .debug_line    0x0000000000000000      0x3a1 Src/main.o
- .debug_line    0x00000000000003a1       0x84 Startup/startup_stm32f407vgtx.o
+.debug_line     0x0000000000000000      0x606
+ .debug_line    0x0000000000000000      0x582 Src/main.o
+ .debug_line    0x0000000000000582       0x84 Startup/startup_stm32f407vgtx.o
 
-.debug_str      0x0000000000000000     0x3b15
- .debug_str     0x0000000000000000     0x3ae4 Src/main.o
-                                       0x3c48 (size before relaxing)
- .debug_str     0x0000000000003ae4       0x31 Startup/startup_stm32f407vgtx.o
+.debug_str      0x0000000000000000     0x7e4e
+ .debug_str     0x0000000000000000     0x7e1d Src/main.o
+                                       0x8062 (size before relaxing)
+ .debug_str     0x0000000000007e1d       0x31 Startup/startup_stm32f407vgtx.o
                                          0x73 (size before relaxing)
 
 .comment        0x0000000000000000       0x7b
