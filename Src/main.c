@@ -20,7 +20,7 @@ int main(void)
 
 	*pClkCtrlReg |= (1 << 3);
 
-	//2. configure the mode of the IO pin as output
+	//2. configure the mode of the IO pin as output fdfdfdf
 	//a. clear the 24th and 25th bit positions (CLEAR)
 	*pPortDModeReg &= ~(3 << 24);
 	//b. make 24th bit position as 1 (SET)
