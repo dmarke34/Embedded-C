@@ -14,7 +14,7 @@ struct DataSet {
 	int data2;
 	char data3;
 	short data4;
-};
+}__attribute__((packed));
 
 struct DataSet data;
 
