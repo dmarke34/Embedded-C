@@ -9,14 +9,14 @@
 
 #include<stdio.h>
 
-struct DataSet {
+typedef struct {
 	char data1;
 	int data2;
 	char data3;
 	short data4;
-}__attribute__((packed));
+}DataSet_t;
 
-struct DataSet data;
+DataSet_t data;
 
 int main(void)
 {
